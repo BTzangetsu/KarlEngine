@@ -1,0 +1,163 @@
+# C++ Game Framework using SFML
+
+## Description
+
+This project is a **modular C++ framework for building 2D games or graphical applications** using **SFML**.
+It provides a structured architecture separating the game logic, rendering, resource management, input handling and UI components.
+
+The goal of this project is to simplify the creation of small games by providing reusable components such as:
+
+* resource managers (textures, fonts, audio)
+* input listeners (keyboard, mouse, joystick)
+* UI elements (buttons, text zones)
+* mathematical utilities
+* a clean game architecture
+
+---
+
+## Technologies
+
+* **C++**
+* **SFML (Simple and Fast Multimedia Library)**
+
+SFML is used for:
+
+* graphics rendering
+* window management
+* input handling
+* audio
+
+
+## Game Module
+
+Contains the **core classes of the game engine**.
+
+```
+src/Game
+```
+
+* `Game.hpp` → Main game controller
+* `GameModel.hpp` → Contains the game state and logic
+* `GameRenderer.hpp` → Responsible for rendering objects using SFML
+* `GameRessources.hpp` → Centralized access to game resources
+* `AudioManager.hpp` → Audio resource manager
+* `TextureManager.hpp` → Texture loading and caching
+* `FontManager.hpp` → Font loading and caching
+
+---
+
+## Listeners Module
+
+Handles **user inputs and window events**.
+
+```
+src/Listeners
+```
+
+* `KeyboardListener.hpp` → Keyboard input handling
+* `MouseListener.hpp` → Mouse input handling
+* `JoystickListener.hpp` → Controller / joystick input
+* `WindowListener.hpp` → Window events
+* `LWindow.hpp` → Wrapper around the SFML window
+
+---
+
+## Managers Module
+
+Provides **utility managers and UI panel management**.
+
+```
+src/Managers
+```
+
+* `Panel.hpp` → UI panel element
+* `PanelManager.hpp` → Handles multiple panels
+* `AudioManager.hpp` → Audio resource manager
+* `TextureManager.hpp` → Texture resource manager
+* `FontManager.hpp` → Font resource manager
+
+---
+
+## Maths Module
+
+Contains mathematical utilities used by the framework.
+
+```
+src/Maths
+```
+
+* `CartesianPlan.hpp` → Cartesian coordinate system
+* `Curve.hpp` → Curve representation and operations
+* `Matrix.hpp` → Matrix operations
+* `NumberGenerator.hpp` → Random number generator
+* `Polynom.hpp` → Polynomial calculations
+
+---
+
+## UI Module
+
+Contains reusable **graphical user interface components**.
+
+```
+src/UI
+```
+
+* `Button.hpp` → Clickable button component
+* `RoundedRectShape.hpp` → Rounded rectangle shape
+* `TextZone.hpp` → Editable text zone
+
+---
+
+
+
+## Dependencies
+
+You must install **SFML** to compile the project.
+
+### Linux (Ubuntu / Debian)
+
+```bash
+sudo apt install libsfml-dev
+```
+
+### MacOS (Homebrew)
+
+```bash
+brew install sfml
+```
+
+### Windows
+
+Download SFML from:
+
+https://www.sfml-dev.org/download.php
+
+---
+
+## Compilation Example
+
+Example using **g++**:
+
+```bash
+g++ -std=c++17 main.cpp -o game \
+-lsfml-graphics \
+-lsfml-window \
+-lsfml-system \
+-lsfml-audio
+```
+
+---
+
+## Objectives
+
+This project was created to:
+
+* experiment with **game architecture in C++**
+* learn **SFML**
+* create reusable **game development tools**
+
+---
+
+## Author
+KARL NOUMDEM
+Student project developed for learning purposes.
